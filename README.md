@@ -1,4 +1,4 @@
-# Build a Redis Clone from Scratch in Go
+# Build a Redis Clone from Scratch in Go and Java
 
 This repository contains a lightweight, concurrent Redis-compatible clone built entirely from scratch in Go. It implements a TCP socket server, parses and serializes the standard Redis Serialization Protocol (RESP), manages data in thread-safe memory stores, and ensures data durability using an Append-Only File (AOF) persistence engine.
 
@@ -12,7 +12,15 @@ Building a database like Redis from scratch is one of the most rewarding exercis
 
 ---
 
-## 🛠️ System Architecture
+## 📖 Discoveries & Learnings
+
+Throughout the development of this project, I have been logging key concepts, new terminology, and "aha!" moments in simple, easy-to-understand terms.
+
+Check out the DISCOVERIES.md file to follow along with the concepts learned (e.g., In-Memory Stores, AOF, Mutexes, RESP, and TCP Sockets).
+
+---
+
+## �️ System Architecture
 
 ```mermaid
 graph TD
@@ -118,12 +126,3 @@ Once connected, run commands:
 5. Run the client and query `GET database`. You should receive `"Go Redis"`, proving that the database reloaded its state successfully from disk!
 
 ---
-
-## 💡 What You Should Know Before Attempting This
-
-If someone wants to build a similar project, they must possess or learn:
-- **Go Concurrency primitives**: Understanding goroutines, channel mechanics, and why `sync.Mutex` vs `sync.RWMutex` are used to prevent data races.
-- **The RESP protocol format**: Familiarity with how data types are structured, especially bulk strings and array elements terminated by `\r\n`.
-- **Basic Networking concepts**: Knowledge of how TCP connections work, handling `io.EOF` when a client disconnects, and why buffered IO (`bufio`) is used to read bytes.
-- **I/O Operations**: Understanding read/write buffers, file seeking, and the difference between buffered file writes and forced physical disk flushing (`fsync`).
-#
