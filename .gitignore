@@ -1,1 +1,11 @@
+# Ignore all markdown files
+*.md
+# But do not ignore README.md
+!README.md
+
+# Ignore binaries and archives
 *.exe
+*.tar
+
+# Ignore local database state
+data/

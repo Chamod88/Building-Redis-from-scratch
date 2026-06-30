@@ -1,0 +1,15 @@
+# Local build binaries/executables
+*.exe
+redis-from-scratch
+server
+
+# Git files
+.git
+.gitignore
+
+# Database file generated locally
+*.aof
+
+# Local documentation or test notes
+DOCS/
+README.md
