@@ -1,4 +1,4 @@
-# Build a Redis Clone from Scratch in Go
+# Build a Redis Clone from Scratch in Go and Java
 
 For full road map: [DOCS/full_feature_roadmap.md](DOCS/full_feature_roadmap.md)
 
